@@ -26,11 +26,12 @@ public class HttpHandler implements com.sun.net.httpserver.HttpHandler {
             OrderBuilder orderBuilder = new OrderBuilder();
             OrderDirector orderDirector = new OrderDirector();
             OrderDTO orderDTO = gson.fromJson(payload,OrderDTO.class);
-
-            System.out.println(payload);
             System.out.println(orderDTO);
+
             DBFake dbFake = new DBFake();
             orderDirector.createOrder(orderBuilder,orderDTO,dbFake);
+            Order order = orderBuilder.getOrder();
+            System.out.println(order);
 
         }
         handleResposta(exchange,valuePayload);

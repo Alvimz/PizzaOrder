@@ -2,10 +2,11 @@ package com.alvim.home.domain.components.repo;
 
 import com.alvim.home.domain.components.Item;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class ItemRepo {
-    private List<Item> itensRepo;
+    private final List<Item> itensRepo= new ArrayList<>();
 
     public ItemRepo() {
 

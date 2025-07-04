@@ -10,7 +10,7 @@ public class OrderBuilder implements Builder{
     private int id;
     private Client client;
     private Restaurant restaurant;
-    private PaymentMethod paymentMethod;
+    private int paymentMethod;
     private String note;
     private int tip;
 
@@ -18,7 +18,7 @@ public class OrderBuilder implements Builder{
     private float valuePayment;
 
     @Override
-    public void setPaymentMethod(PaymentMethod paymentService) { this.paymentMethod = paymentService;} //TODO arrumar aqui
+    public void setPaymentMethod(int paymentService) { this.paymentMethod = paymentService;} //TODO arrumar aqui
     @Override
     public void setClient(Client client) {
         this.client = client;

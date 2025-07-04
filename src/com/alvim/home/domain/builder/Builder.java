@@ -7,7 +7,7 @@ import com.alvim.home.domain.components.Restaurant;
 import com.alvim.home.service.paymentService.PaymentService;
 
 public interface Builder {
-    public void setPaymentMethod(PaymentMethod paymentService); //TODO verificar isso aqui
+    public void setPaymentMethod(int paymentService); //TODO verificar isso aqui
     public void setClient(Client client);
     public void setRestaurant(Restaurant restaurant);
     public void addItem(Item item);

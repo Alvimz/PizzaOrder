@@ -6,7 +6,7 @@ public class Order {
     private final int id;
     private final Client client;
     private final Restaurant restaurant;
-    private final PaymentMethod paymentMethod; //TODO verificar se isso está certo, parece confuso!
+    private final int paymentMethod; //TODO verificar se isso está certo, parece confuso!
     private final StatusOrder statusOrder = StatusOrder.PROCESSING;
     private final String note;
     private final List<Item> itens;
@@ -15,7 +15,7 @@ public class Order {
 
 
 
-    public Order(PaymentMethod paymentService, Restaurant restaurant,
+    public Order(int paymentService, Restaurant restaurant,
                  Client client, int id, String note,
                  float valuePayment, List<Item> itens, int tip) {
         this.paymentMethod = paymentService;
@@ -60,8 +60,22 @@ public class Order {
         return itens;
     }
 
-    public PaymentMethod getPaymentMethod() {
+    public int getPaymentMethod() {
         return paymentMethod;
     }
 
+    @Override
+    public String toString() {
+        return "Order{" +
+                "id=" + id +
+                ", client=" + client +
+                ", restaurant=" + restaurant +
+                ", paymentMethod=" + paymentMethod +
+                ", statusOrder=" + statusOrder +
+                ", note='" + note + '\'' +
+                ", itens=" + itens +
+                ", valuePayment=" + valuePayment +
+                ", tip=" + tip +
+                '}';
+    }
 }
