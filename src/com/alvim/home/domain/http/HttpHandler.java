@@ -3,6 +3,7 @@ package com.alvim.home.domain.http;
 import com.alvim.home.domain.builder.OrderBuilder;
 import com.alvim.home.domain.components.Order;
 import com.alvim.home.domain.components.OrderDTO;
+import com.alvim.home.domain.components.repo.DBFake;
 import com.alvim.home.service.builder.OrderDirector;
 import com.sun.net.httpserver.HttpExchange;
 
@@ -25,8 +26,11 @@ public class HttpHandler implements com.sun.net.httpserver.HttpHandler {
             OrderBuilder orderBuilder = new OrderBuilder();
             OrderDirector orderDirector = new OrderDirector();
             OrderDTO orderDTO = gson.fromJson(payload,OrderDTO.class);
+
             System.out.println(payload);
             System.out.println(orderDTO);
+            DBFake dbFake = new DBFake();
+            orderDirector.createOrder(orderBuilder,orderDTO,dbFake);
 
         }
         handleResposta(exchange,valuePayload);
