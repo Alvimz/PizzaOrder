@@ -30,9 +30,7 @@ public class OrderBuilder implements Builder{
     }
 
     @Override
-    public void addItem(Item item) {
-        this.itens.add(item);
-    }
+    public void setItens(List<Item> itens) { this.itens = itens; }
 
     @Override
     public void setID(int id) {

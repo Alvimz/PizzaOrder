@@ -8,8 +8,9 @@ import com.alvim.home.domain.components.repo.DBFake;
 public class OrderDirector {
     public void createOrder(Builder builder, OrderDTO dto, DBFake dbFake){
         builder.setID(dto.getId());
-        builder.addItem(dbFake.itemRepo.findById());
-        builder.setClient(dbFake.clientRepo.findById(dto.getId()));
+
+        builder.setItens(dto.getItens());
+        builder.setClient(dbFake.clientRepo.findById(dto.getId())); //todo isso está errado!!!
         builder.setNote(dto.getNote());
         builder.setRestaurant(dbFake.restaurantRepo.findById(dto.getRestaurant()));
         builder.setTip(dto.getTip());
@@ -17,5 +18,8 @@ public class OrderDirector {
         builder.setPaymentMethod(dto.getPaymentMethod());
 
     }
+
+
+
 
 }
