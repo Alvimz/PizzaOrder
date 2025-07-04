@@ -31,9 +31,9 @@ public class HttpHandler implements com.sun.net.httpserver.HttpHandler {
             Order order = orderBuilder.getOrder();
             System.out.println(order);
             // até aqui!
+            handleResposta(exchange,payload);
 
         }
-        handleResposta(exchange,valuePayload);
 
     }
 
