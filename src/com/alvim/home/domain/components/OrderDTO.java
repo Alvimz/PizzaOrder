@@ -6,7 +6,7 @@ public class OrderDTO {
     private int id;
     private int client;
     private int restaurant;
-    private int paymentMethod; //TODO verificar se isso está certo, parece confuso!
+    private int paymentMethod; //TODO verificar se isso está certo, parece-me confuso!
     private StatusOrder statusOrder = StatusOrder.PROCESSING;
     private String note;
     private List<Item> itens;
