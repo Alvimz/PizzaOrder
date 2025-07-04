@@ -22,7 +22,7 @@ public class HttpHandler implements com.sun.net.httpserver.HttpHandler {
         if("POST".equals(exchange.getRequestMethod())){
             String payload = new String(exchange.getRequestBody().readAllBytes(), StandardCharsets.UTF_8);
 
-            //confesso que fiquei um pouco perdido aqui!
+            //confesso que fiquei um pouco perdido aqui! E também isso não parece que é aqui!
             OrderBuilder orderBuilder = new OrderBuilder();
             OrderDirector orderDirector = new OrderDirector();
             OrderDTO orderDTO = gson.fromJson(payload,OrderDTO.class);
