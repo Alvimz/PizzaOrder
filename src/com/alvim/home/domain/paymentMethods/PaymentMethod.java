@@ -1,4 +1,4 @@
-package com.alvim.home.domain.components;
+package com.alvim.home.domain.paymentMethods;
 
 public enum PaymentMethod {
     PIX(0),

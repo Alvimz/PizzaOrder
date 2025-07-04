@@ -2,9 +2,7 @@ package com.alvim.home.domain.builder;
 
 import com.alvim.home.domain.components.Client;
 import com.alvim.home.domain.components.Item;
-import com.alvim.home.domain.components.PaymentMethod;
 import com.alvim.home.domain.components.Restaurant;
-import com.alvim.home.service.paymentService.PaymentService;
 
 import java.util.List;
 
