@@ -10,7 +10,7 @@ public class OrderDirector {
         builder.setID(dto.getId());
 
         builder.setItens(dto.getItens());
-        builder.setClient(dbFake.clientRepo.findById(dto.getId())); //todo isso está errado!!!
+        builder.setClient(dbFake.clientRepo.findById(dto.getClient())); //todo isso está errado!!!
         builder.setNote(dto.getNote());
         builder.setRestaurant(dbFake.restaurantRepo.findById(dto.getRestaurant()));
         builder.setTip(dto.getTip());
