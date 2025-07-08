@@ -5,7 +5,7 @@ import com.alvim.home.domain.components.Order;
 import com.alvim.home.domain.components.OrderDTO;
 import com.alvim.home.domain.components.repo.DBFake;
 import com.alvim.home.service.builder.OrderDirector;
-import com.alvim.home.service.httpDecorators.Handler;
+import com.alvim.home.service.httpDecorators.HandlerInterface;
 import com.google.gson.Gson;
 import com.sun.net.httpserver.HttpExchange;
 
@@ -13,7 +13,7 @@ import java.io.IOException;
 import java.io.OutputStream;
 import java.nio.charset.StandardCharsets;
 
-public class OrderHandler implements Handler {
+public class OrderHandler implements HandlerInterface {
     Gson gson = new Gson();
     OrderDirector orderDirector = new OrderDirector();
     DBFake dbFake = new DBFake();

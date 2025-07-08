@@ -1,6 +1,6 @@
 package com.alvim.home.service.httpDecorators.decorators;
 
-import com.alvim.home.service.httpDecorators.Handler;
+import com.alvim.home.service.httpDecorators.HandlerInterface;
 import com.alvim.home.service.httpDecorators.HandlerWrapper;
 import com.sun.net.httpserver.HttpExchange;
 
@@ -9,7 +9,7 @@ import java.nio.charset.StandardCharsets;
 public class HttpMethodValidatorDecorator extends HandlerWrapper {
     private final String expectedMethod;
 
-    public HttpMethodValidatorDecorator(String expectedMethod,Handler wrapper) {
+    public HttpMethodValidatorDecorator(String expectedMethod, HandlerInterface wrapper) {
         super(wrapper);
         this.expectedMethod = expectedMethod.toUpperCase();
     }
