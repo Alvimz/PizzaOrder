@@ -23,6 +23,7 @@ public class OrderHandler implements Handler {
     public void handle(HttpExchange exchange) {
         try{
             String payload = new String(exchange.getRequestBody().readAllBytes(), StandardCharsets.UTF_8);
+
             //confesso que fiquei um pouco perdido aqui! E também isso não parece que é aqui!
             OrderDTO orderDTO = gson.fromJson(payload,OrderDTO.class);
             orderDirector.createOrder(orderBuilder,orderDTO,dbFake);
