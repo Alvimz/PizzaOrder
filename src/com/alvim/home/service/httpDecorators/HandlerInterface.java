@@ -3,6 +3,6 @@ package com.alvim.home.service.httpDecorators;
 import com.sun.net.httpserver.HttpExchange;
 
 
-public interface Handler {
+public interface HandlerInterface {
     void handle(HttpExchange exchange);
 }
